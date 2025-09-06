@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Khaled portfolio</title>
+    <meta name='portfolio' content='width=device-width, initial-scale=1'>
+    
+</head>
+<style>
+    body{margin:0;font-family:Arial, sans-serif
+    /*background url('image/4f58e7fc-cfa1-4266-afe4-dfc0aa7cfe20.jfif') no-repeat center center fixed;
+    background-size: cover*/
+    
+    }
+
+    .topbar{
+        background:#000; color:#fff;
+        display:flex; align-items:center; justify-content:space-between;
+        padding:1px 20px; gap:10px;
+        position:fixed; top:0; left:0; right:0; z-index:999;
+    }
+
+    .kal{display:flex; gap:10px; align-items:center}
+
+    .btn{
+    background:transparent; border:1px solid rgba(255,255,255,0.15);
+    color:#fff; padding:8px 12px; border-radius:6px;
+    text-decoration:none; font-size:14px; font-weight:600;
+    transition:background 0.3s; 
+    }
+
+    .btn:hover{background:rgba(255,255,255,0.08)}
+
+    .topbar{flex-wrap:wrap}
+    .kal{width:100%; justify-content:flex-start}
+    nav{padding:100px 20px 20px 20px; max-width:800px; margin:auto}
+    h1{font-size:32px; margin-bottom:10px}
+    .sig{font-weight:700}
+    p{font-size:18px; line-height:1.6; color:#333}
+    .content{padding:20px; max-width:800px; margin:auto}
+    ul{list-style-type:disc; padding-left:20px}
+    li{font-size:18px; line-height:1.6; color:#333; margin-bottom:10px}
+
+
+    .toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #000000;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius:6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition:background 0.3s;
+    z-index: 1001;
+    }
+    .toggle-btn:hover{background:rgba(255,255,255,0.08)}
+    .sidebar {
+    position:fixed;
+    top:0;
+    right:-320px; 
+    width:200px;
+    height:100%;
+    background:#465053;
+    color:#fff;
+    padding:20px;
+    transition:right 0.3s ease;
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+    overflow-y: auto;
+    /*justify-content:space-between; */
+    }
+    .sidebar.active { right:0; }
+
+    .close-btn {
+    background:rgb(0, 0, 0);
+    color:#fff;
+    border:none;
+    padding:8px;
+    cursor:pointer;
+    border-radius:6px;
+    width:100%;
+    }  
+    .close-btn:hover { background:#c00; }
+    
+    .frameContainer {
+    margin-top:20px;
+    display:none; 
+    }
+    .imgsContainer {
+    margin-top:20px;
+    display:none; 
+    }
+    .picContainer {
+    margin-top:20px;
+    display:none; 
+    }
+
+
+    .footer {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    /*position: fixed;*/
+    }
+    .footer .left,
+    .footer .right {
+    width: 45%;
+    }
+
+    .copyright {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    position: bottom 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    }
+
+    form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],   
+    textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+    input[type="submit"] {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+    }
+    input[type="submit"]:hover {
+    background: #333;
+    }
+
+</style>
+<body>
+    <header class="topbar">
+        
+        
+        <ul class="kal" >
+            <img class="sig" src="./image/8f8cb81e-711c-4607-ac19-3fcdef214b0e shafaf abiad.jfif" alt="khaled signature" height="50"  >  
+            <a href="index.html" class="btn">Home</a>
+            <a href="#about1" class="btn">About</a>
+            <a href="#skill1" class="btn" >skills</a>
+            <a href="#projects1" class="btn">Projects</a>
+            <a href="#contact1" class="btn">Contact me</a>
+        </ul>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    </header>
+
+    <nav id="about1">
+        <h1>About me</h1>
+            <p>My name is <B>Khaled Waleed Sadek Hamdi</B>, a 21-year-old student in my final year of <B>Electronics and Computer Engineering</B> at <B>IAEMS</B>.
+
+            I specialize in Web Development and Android App Development, with a strong foundation in C++, Java, JavaScript , Python and hardware-related systems. My passion lies in combining software, hardware, and AI to create innovative solutions that solve real-world problems.
+
+            I am highly practical, detail-oriented, and always eager to learn new technologies, aiming to build a career in the field of software development and smart devices.</p>
+
+    </nav>
+
+    <section class="content" id="projects1" >
+        <h1 >Projects</h1>
+        <ul>
+            <li><b>Cashier Management System:</b> Developed a desktop-based cashier system for a coffee grinding business, enabling sales tracking, inventory management, and receipt generation with a user-friendly interface using Java and Javafx.</li>
+            <li><b>Personal Portfolio Website:</b> Created a responsive portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills.</li>
+            <li><b>Android Profit Calculator App:</b> Built an Android application that calculate the profit of your business using Java whit Android Studio.</li>
+            <li><b>AI-Powered Chatbot:</b> Developed a chatbot using n8n , JavaScript and machine learning techniques to assist users on a telegram.</li>
+
+        </ul>
+
+
+    </section>
+
+    <section class="content" id="skill1">
+        <h1>Skills</h1>
+        <ul>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+            <li>Mobile App Development: Java (Android)</li>
+            <li>Programming Languages: C++, Python, Java</li>
+            <li>Database Management: MySQL, SQLite</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>AI and Machine Learning: Basic understanding and implementation</li>
+            <li>Hardware Knowledge: PCB, Microcontrollers, Embedded Systems</li>
+        </ul>
+
+    </section>
+
+
+
+
+    <script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+    function openFrame() {
+        var frameContainer = document.querySelector('.frameContainer');
+        if (frameContainer.style.display === 'block') {
+            frameContainer.style.display = 'none';
+        } else {
+            frameContainer.style.display = 'block';
+        }
+    }   
+    function openimgs() {
+        var imgsContainer = document.querySelector('.imgsContainer');
+        if (imgsContainer.style.display === 'block') {
+            imgsContainer.style.display = 'none';
+        } else {
+            imgsContainer.style.display = 'block';
+        }
+    }
+    function openpic() {
+        var picContainer = document.querySelector('.picContainer');
+        if (picContainer.style.display === 'block') {
+            picContainer.style.display = 'none';
+        } else {
+            picContainer.style.display = 'block';
+        }
+    }
+
+    document.getElementById("sendWhatsapp").addEventListener("click", function() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+        
+        let text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+        let phone = "+210155193200";
+        let url = `https://wa.me/${phone}?text=${text}`;
+        
+        this.href = url;
+    });
+    </script>
+
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <h3>My Picture</h3>
+            <button class="btn" onclick="openpic()">Click Me</button>
+            <div class="picContainer">
+            <img src="./image/570c7781-55bb-4f1a-bdcc-e9f7f342a897.png" alt="Khaled Waleed Sadek" width="180" style="border-radius:10px; margin-bottom:10px;">
+            </div>
+            <hr  />
+            <h3>My Linkedin</h3>
+            <button class="btn" onclick="openFrame()">Click Me</button>
+            <div class="frameContainer">
+            <iframe src="https://www.linkedin.com/in/khaled-waleed-a27081376/" 
+                width="200"
+                height="400"
+                style="border:1px solid #ccc;">
+            </iframe>
+            </div>
+            <hr  />
+            <h3>My Certificates</h3>
+            <button class="btn" onclick="openimgs()">Click Me</button>
+            <div class="imgsContainer">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0002.jpg" alt="Certificate 1" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0003.jpg" alt="Certificate 2" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0004.jpg" alt="Certificate 3" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0005.jpg" alt="Certificate 4" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0006.jpg" alt="Certificate 5" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0007.jpg" alt="Certificate 6" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0008.jpg" alt="Certificate 8" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0009.jpg" alt="Certificate 9" width="180" style="margin-bottom:10px;">
+                <img src="./image/Eng.Khaled Waleed Sadek CV_page-0010.jpg" alt="Certificate 10" width="180" style="margin-bottom:10px;">
+
+            </div>
+            <hr  />
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">X Close</button>
+    </div>
+
+    <footer class="footer" id="contact1">
+    <div class="left">
+        <h4>Contact Me</h4>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <a id="sendWhatsapp" class="btn" href="#" target="_blank">Send via WhatsApp</a>
+
+
+
+        </form>
+
+
+    </div>
+    <div class="right">
+        <h4>About</h4>
+        <p>Email: khaledwaleedonline@gmail.com</p>
+        <p>Phone: +20 155 193 200</p>
+        <P>Linkedin: <a href="https://www.linkedin.com/in/khaled-waleed-a27081376/" target="_blank">Click</a></P>
+    </div>
+    </footer>
+
+
+
+    <div class="copyright">
+        <samp>© 2025 Khaled. All rights reserved.</samp>
+    </div>
+
+</body>
+</html>
